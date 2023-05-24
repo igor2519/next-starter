@@ -1,0 +1,21 @@
+version: '3'
+services:
+  manager-postgres:
+    image: postgres:14.2-alpine
+    volumes:
+      - postgres:/var/lib/postgresql/data
+    environment:
+      POSTGRES_USER: ${DATABASE_USERNAME}
+      POSTGRES_PASSWORD: ${DATABASE_PASSWORD}
+      POSTGRES_DB: ${DATABASE_NAME}
+    ports:
+      - ${DATABASE_PORT}:5432
+  mailhog:
+    image: mailhog/mailhog
+    restart: unless-stopped
+    ports:
+      - ${MAILHOG_PORT}:1025
+      - 8025:8025
+
+volumes:
+  postgres:

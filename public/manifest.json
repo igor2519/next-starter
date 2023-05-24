@@ -1,0 +1,23 @@
+{
+  "name": "My App",
+  "short_name": "My App",
+  "start_url": "/",
+  "display": "standalone",
+  "icons": [
+    {
+      "src": "/favicon.ico",
+      "type": "image/ico",
+      "sizes": "64x64"
+    },
+    {
+      "src": "/logo.svg",
+      "type": "image/svg",
+      "sizes": "128x128"
+    },
+    {
+      "src": "/logo.svg",
+      "type": "image/svg",
+      "sizes": "512x512"
+    }
+  ]
+}
